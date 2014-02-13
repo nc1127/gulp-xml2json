@@ -18,7 +18,7 @@ module.exports = function (options) {
 			return cb(new gutil.PluginError('gulp-xml2json', 'Streaming not supported'));
 		}
 
-		if (['.xml', 'XML'].indexOf(path.extname(file.path)) === -1) {
+		if (['.xml', '.XML'].indexOf(path.extname(file.path)) === -1) {
 			gutil.log('gulp-xml2json: Skipping unsupported xml ' + gutil.colors.blue(file.relative));
 			return cb(null, file);
 		}
