@@ -27,9 +27,8 @@ gulp.task('default', function () {
 
 ## API
 
-### xml2json(options)
+### xml2json()
 
-See the xml2json [options](https://github.com/GoalSmashers/clean-css).
 
 ## License
 
