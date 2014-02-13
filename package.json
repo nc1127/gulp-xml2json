@@ -1,15 +1,15 @@
 {
-  "name": "gulp-cssmin",
+  "name": "gulp-xml2json",
   "version": "0.1.0",
-  "description": "minify css using gulp",
+  "description": "xml to json using gulp",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
   "keywords": [
     "gulp",
-    "min",
-    "css"
+    "xml",
+    "json"
   ],
   "dependencies": {
     "gulp-util": "~2.2.0",
