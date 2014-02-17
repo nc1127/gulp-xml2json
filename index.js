@@ -48,8 +48,6 @@ module.exports = function (options) {
 						file.path = gutil.replaceExtension(file.path, '.json');
 						cb(null, file);
 					});
-					
-
 				
 				});
 
