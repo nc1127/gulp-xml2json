@@ -1,5 +1,7 @@
 # gulp-xml2json
 
+[![Build Status](https://travis-ci.org/DataGarage/gulp-xml2json.png?branch=master)](https://travis-ci.org/DataGarage/gulp-xml2json)
+
 gulp plugin convert xml to json
 
 ## Install
