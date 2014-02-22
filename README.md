@@ -18,10 +18,12 @@ npm install --save-dev gulp-xml2json
 ```js
 var gulp = require('gulp');
 var xml2json = require('gulp-xml2json');
+var rename = require('gulp-rename');
 
 gulp.task('default', function () {
 	gulp.src('src/**/*.xml')
 		.pipe(xml2json())
+		.pipe(rename({extname: '.json'}))
 		.pipe(gulp.dest('dist'));
 });
 ```
