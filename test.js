@@ -7,7 +7,7 @@ var xml2json = require('./index');
 it('should convert xml to json', function (cb) {
 	var stream = xml2json();
 	stream.on('data', function (file) {
-    var parse_str = JSON.parse(file.contents.toString('utf-8'));
+	var parse_str = JSON.parse(file.contents.toString('utf-8'));
 		assert(parse_str instanceof Object);
 		cb();
 	});
