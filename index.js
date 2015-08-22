@@ -7,7 +7,6 @@ var filesize = require('filesize');
 var tempWrite = require('temp-write');
 var xml2js = require('xml2js');
 
-
 module.exports = function (options) {
 	return map(function (file, cb) {
 		if (file.isNull()) {
@@ -40,15 +39,15 @@ module.exports = function (options) {
 						return cb(new gutil.PluginError('gulp-xml2json', err));
 					}
 
-					var parser = new xml2js.Parser();
+					var parser = new xml2js.Parser(options);
 					parser.parseString(data, function (err, result) {
-						if(err) throw new Error(err);	
-						gutil.log('gulp-xml2json:', gutil.colors.green('✔ ') + file.relative); 
+						if(err) throw new Error(err);
+						gutil.log('gulp-xml2json:', gutil.colors.green('✔ ') + file.relative);
 						file.contents = new Buffer(JSON.stringify(result));
 						file.path = gutil.replaceExtension(file.path, '.json');
 						cb(null, file);
 					});
-				
+
 				});
 
 			});
