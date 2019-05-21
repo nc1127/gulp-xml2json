@@ -35,7 +35,7 @@ module.exports = function (options) {
 				options = options || {};
 
 				fs.readFile(tempFile, { encoding : 'UTF-8'}, function(err, data) {
-					if(option.removeTmpFiles) {
+					if(options.removeTmpFiles) {
 					 	fs.unlinkSync(tempFile);
 					}
 					if (err) {
