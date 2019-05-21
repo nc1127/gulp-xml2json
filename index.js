@@ -35,6 +35,9 @@ module.exports = function (options) {
 				options = options || {};
 
 				fs.readFile(tempFile, { encoding : 'UTF-8'}, function(err, data) {
+					if(option.removeTmpFiles) {
+					 	fs.unlinkSync(tempFile);
+					}
 					if (err) {
 						return cb(new gutil.PluginError('gulp-xml2json', err));
 					}
